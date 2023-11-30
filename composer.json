@@ -27,6 +27,7 @@
         "pestphp/pest-plugin-faker": "^v2.0",
         "pestphp/pest-plugin-laravel": "^v2.2",
         "pestphp/pest-plugin-livewire": "^v2.1",
+        "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.4",
         "spatie/laravel-ignition": "^2.0",
         "tightenco/duster": "^2.5"
@@ -58,7 +59,8 @@
             "@php artisan key:generate --ansi"
         ],
         "format": [
-            "./vendor/bin/duster fix"
+            "./vendor/bin/duster fix",
+            "./vendor/bin/phpstan analyse app config database routes tests"
         ]
     },
     "extra": {
