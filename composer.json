@@ -18,6 +18,7 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^v3.9",
         "fakerphp/faker": "^1.9.1",
+        "jasonmccreary/laravel-test-assertions": "^2.0",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
@@ -28,7 +29,7 @@
         "pestphp/pest-plugin-livewire": "^v2.1",
         "phpunit/phpunit": "^10.4",
         "spatie/laravel-ignition": "^2.0",
-        "jasonmccreary/laravel-test-assertions": "^2.0"
+        "tightenco/duster": "^2.5"
     },
     "autoload": {
         "psr-4": {
@@ -55,6 +56,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "format": [
+            "./vendor/bin/duster fix"
         ]
     },
     "extra": {
